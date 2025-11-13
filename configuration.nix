@@ -138,11 +138,8 @@
   xdg-desktop-portal-gtk
   gparted
   github-cli
-
-  #home-manager
+  github-desktop
   
-  home-manager
-
   #editor
 
   vscodium

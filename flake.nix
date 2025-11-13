@@ -11,6 +11,7 @@
     
      nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
      nix-gaming.url = "github:fufexan/nix-gaming";
+     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = inputs@{ self, nixpkgs, ... }: {
