@@ -139,6 +139,10 @@
   gparted
   github-cli
 
+  #home-manager
+  
+  home-manager
+
   #editor
 
   vscodium
