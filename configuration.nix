@@ -5,11 +5,17 @@
   imports =
     [  
       ./hardware-configuration.nix
-    ];
+      ./modules.nix
+    ]; 
 
   nix.settings.trusted-users = ["@wheel"];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  programs.nh = {
+       enable = true;
+       flake = "/etc/nixos"; 
+  };
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -94,56 +100,13 @@
   
   services.flatpak.enable = true;  
   
-  #steam 
+  
 
   programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
-
-  #terminal
-
-  nano
-  fastfetch
-  htop
-  tree 
-  cava
-
-  #audio
-
-  spotify
-  audacious
-
-  #games
- 
-  lutris
-  heroic
-  wine
-  gamemode
-  osu-lazer-bin
-
-  #video
-
-  obs-studio
-  vlc
-
-  #chat
-    
-  vesktop 
-
-  #tools
-
-  git 
-  wget
-  unzip
-  zenity
-  xdg-desktop-portal-gtk
-  gparted
-  github-cli
-  github-desktop
+   
   
-  #editor
-
-  vscodium
 
   ];
 
