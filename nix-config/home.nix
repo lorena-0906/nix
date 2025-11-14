@@ -7,17 +7,16 @@
   home.homeDirectory = "/home/lorena";
 
   home.packages = with pkgs; [ 
-  #terminal
-
-  fish
 
   #games
 
   osu-lazer-bin
   gamemode
-  
-  ];
+  vscodium
+  direnv
 
+  ];
+  
   programs.home-manager.enable = true;
   programs.bash.enable = true;
   nixpkgs.config.allowUnfree = true;

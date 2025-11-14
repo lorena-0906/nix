@@ -9,7 +9,7 @@
   htop
   tree 
   cava
-  fish
+  
 
   #audio
 
@@ -41,13 +41,7 @@
   gparted
   github-cli
   github-desktop
-  
-  #editor
-
-  vscodium
-  direnv
-
-     
+       
     ];
 }
   

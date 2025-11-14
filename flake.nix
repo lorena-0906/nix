@@ -14,14 +14,14 @@
      "niko-wife" = nixpkgs.lib.nixosSystem {
        specialArgs = {inherit inputs;};
        system = "x86_64-linux";
-       modules = [ ./configuration.nix ];
+       modules = [ ./nix-config/configuration.nix ];
      };
    }; 
 
    homeConfigurations = {
      "lorena@niko-wife" = home-manager.lib.homeManagerConfiguration {
        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-       modules = [ ./home.nix ];
+       modules = [ ./nix-config/home.nix ];
      };
    };
  };

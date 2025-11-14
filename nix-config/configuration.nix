@@ -5,7 +5,8 @@
   imports =
     [  
       ./hardware-configuration.nix
-      ./modules.nix
+      ../modules.nix
+  
     ]; 
 
   nix.settings.trusted-users = ["@wheel"];
@@ -98,8 +99,6 @@
   nixpkgs.config.allowUnfree = true;
   
   services.flatpak.enable = true;  
-  
-  
 
   programs.gamemode.enable = true;
 
