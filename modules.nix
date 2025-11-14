@@ -21,8 +21,6 @@
   lutris
   heroic
   wine
-  gamemode
-  osu-lazer-bin
 
   #video
 
