@@ -1,27 +1,28 @@
 {
-  nixConfig = {
-    extra-substituters = ["https://nix-gaming.cachix.org/"];
-    extra-trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
-  };
+  
+ description = "Flake file made by Deive";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    #gaming
-    nix-gaming.url = "github:fufexan/nix-gaming";
-    #unstable
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; 
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, ... }: {
+  outputs = {self, nixpkgs, home-manager} @ inputs: {
+
    nixosConfigurations = {
-       #hostname
-      "niko-wife" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-        
-          ./configuration.nix 
-        ];
-      };
-    };
-  };
-}  
+     "niko-wife" = nixpkgs.lib.nixosSystem {
+       specialArgs = {inherit inputs;};
+       system = "x86_64-linux";
+       modules = [ ./configuration.nix ];
+     };
+   }; 
+
+   homeConfigurations = {
+     "lorena@niko-wife" = home-manager.lib.homeManagerConfiguration {
+       pkgs = nixpkgs.legacyPackages."x86_64-linux";
+       modules = [ ./home.nix ];
+     };
+   };
+ };
+}

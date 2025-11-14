@@ -16,7 +16,6 @@
        enable = true;
        flake = "/etc/nixos"; 
   };
-
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/nvme0n1";
