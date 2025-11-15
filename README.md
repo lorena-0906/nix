@@ -1,4 +1,4 @@
-(ARCHIVED FOR FUTURE (nvidia driver and legacy problem😭))
+(ARCHIVED FOR FUTURE)
 
 flakes, home-manager, modules (default)...
 
