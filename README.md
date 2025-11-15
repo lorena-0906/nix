@@ -1,3 +1,5 @@
+(ARCHIVED FOR FUTURE (nvidia driver and legacy problem😭))
+
 flakes, home-manager, modules (default)...
 
 i'm lore (lorena) and i'm begginer in nix world. then my config is "just basic" for my daily driver.
